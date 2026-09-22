@@ -255,7 +255,7 @@
     {
       "peak_mb": 4382.5,
       "peak_device_mb": 4382.5,
-      "peak_rss_mb": 1477.7,
+      "peak_rss_mb": 1627.4,
       "metric": "аллокатор mps",
       "metric_source": "torch.mps.driver_allocated_memory",
       "rss_source": "ru_maxrss",
@@ -263,7 +263,7 @@
       "device": "mps",
       "seq_len": 256,
       "batch_size": 1,
-      "seconds": 6.8,
+      "seconds": 7.9,
       "loss": null,
       "repeats": 1,
       "peak_mb_runs": [
@@ -271,9 +271,9 @@
       ]
     },
     {
-      "peak_mb": 17004.5,
-      "peak_device_mb": 17004.5,
-      "peak_rss_mb": 3810.7,
+      "peak_mb": 16684.5,
+      "peak_device_mb": 16684.5,
+      "peak_rss_mb": 3851.1,
       "metric": "аллокатор mps",
       "metric_source": "torch.mps.driver_allocated_memory",
       "rss_source": "ru_maxrss",
@@ -281,17 +281,17 @@
       "device": "mps",
       "seq_len": 256,
       "batch_size": 1,
-      "seconds": 32.3,
+      "seconds": 29.5,
       "loss": 13.6807,
       "repeats": 1,
       "peak_mb_runs": [
-        17004.5
+        16684.5
       ]
     },
     {
       "peak_mb": 5684.5,
       "peak_device_mb": 5684.5,
-      "peak_rss_mb": 4473.1,
+      "peak_rss_mb": 4479.4,
       "metric": "аллокатор mps",
       "metric_source": "torch.mps.driver_allocated_memory",
       "rss_source": "ru_maxrss",
@@ -299,7 +299,7 @@
       "device": "mps",
       "seq_len": 256,
       "batch_size": 1,
-      "seconds": 7.9,
+      "seconds": 8.3,
       "loss": 13.6807,
       "repeats": 1,
       "peak_mb_runs": [
