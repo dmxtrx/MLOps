@@ -1,6 +1,6 @@
-data/
-.venv/
-__pycache__/
 .DS_Store
-*.bak
-*.orig
+__pycache__/
+.venv/
+*.pyc
+data/
+.check_*.log

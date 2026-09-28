@@ -1,0 +1,234 @@
+schema: '2.0'
+stages:
+  collect:
+    cmd: python -m src.collect
+    deps:
+    - path: sources/medmcqa
+      hash: md5
+      md5: f9646f0e491c33c33964ef529a45bfdd.dir
+      size: 87375129
+      nfiles: 2
+    - path: src/collect.py
+      hash: md5
+      md5: 4629d48944cc3bed9687a6768ab76217
+      size: 7455
+    - path: src/config.py
+      hash: md5
+      md5: 9e487ae55cd79a8a7582f0dfec84f671
+      size: 2094
+    params:
+      params.yaml:
+        collect:
+          version: v2
+          n_rows: 3000
+          sources:
+            v1:
+            - sources/medmcqa/data/train-00000-of-00001.parquet
+            v2:
+            - sources/medmcqa/data/train-00000-of-00001.parquet
+            - sources/medmcqa/data/validation-00000-of-00001.parquet
+          subjects:
+          system_prompts:
+          - You answer multiple-choice questions from Indian medical entrance 
+            exams (AIIMS, NEET PG). The options are numbered from 0. Choose the 
+            single correct option. Reply with the option number and its text 
+            only, no explanation.
+          - Below is a medical exam question with four options numbered from 
+            zero. Pick the one correct option and output its number and text. Do
+            not explain.
+          - 'Task: select the correct answer to a medical multiple-choice question.
+            Options are numbered starting at 0. Output only the number and the text
+            of the chosen option, without reasoning.'
+          - 'You help students prepare for medical postgraduate entrance exams. Given
+            a question and options numbered from 0, name the single correct option:
+            first its number, then its text. Add no commentary.'
+          - Answer the clinical multiple-choice question. Options are numbered 
+            from 0 and exactly one is correct. Output the number of the correct 
+            option followed by its text, and nothing else.
+        paths.metrics_collect: metrics/collect.json
+        paths.raw: data/raw.jsonl
+    outs:
+    - path: data/raw.jsonl
+      hash: md5
+      md5: 90161b3b29a99fcf4fbccd003ad1cfcb
+      size: 2191422
+    - path: metrics/collect.json
+      hash: md5
+      md5: 6509154fa32c4656fd7586729e77bb33
+      size: 281
+  clean:
+    cmd: python -m src.clean
+    deps:
+    - path: data/raw.jsonl
+      hash: md5
+      md5: 90161b3b29a99fcf4fbccd003ad1cfcb
+      size: 2191422
+    - path: src/clean.py
+      hash: md5
+      md5: 20af3fb37f88d8d97b6bb416beccfd71
+      size: 4646
+    - path: src/config.py
+      hash: md5
+      md5: 9e487ae55cd79a8a7582f0dfec84f671
+      size: 2094
+    - path: src/dedup.py
+      hash: md5
+      md5: fde80d28430f1612c4cbb7f0fdcc1f4d
+      size: 2757
+    - path: src/pii.py
+      hash: md5
+      md5: 54de6f3690578d83cfc17094d2d2aa7a
+      size: 2397
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/stats.py
+      hash: md5
+      md5: a54925032eff4769647b5775d72dd423
+      size: 2222
+    - path: src/textnorm.py
+      hash: md5
+      md5: c7e2f072fe9cc4d2b5af76f5c360c6c0
+      size: 1844
+    params:
+      params.yaml:
+        clean:
+          min_user_chars: 30
+          max_user_chars: 4000
+          min_assistant_chars: 2
+          near_dup:
+            enabled: true
+            shingle_words: 4
+            num_perm: 64
+            threshold: 0.85
+          pii:
+            enabled: true
+        paths.clean: data/clean.jsonl
+        paths.metrics_clean: metrics/clean.json
+        paths.raw: data/raw.jsonl
+    outs:
+    - path: data/clean.jsonl
+      hash: md5
+      md5: 7cfff82643faed2b0fc194fc2c95f83a
+      size: 2187471
+    - path: metrics/clean.json
+      hash: md5
+      md5: c910bc8a4c01b3e76a2ad622ebb478b0
+      size: 443
+  diversity:
+    cmd: python -m src.diversity
+    deps:
+    - path: data/clean.jsonl
+      hash: md5
+      md5: 7cfff82643faed2b0fc194fc2c95f83a
+      size: 2187471
+    - path: src/config.py
+      hash: md5
+      md5: 9e487ae55cd79a8a7582f0dfec84f671
+      size: 2094
+    - path: src/diversity.py
+      hash: md5
+      md5: 539f9f9430b7a18c84d19011a0ac6f06
+      size: 6783
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/stats.py
+      hash: md5
+      md5: a54925032eff4769647b5775d72dd423
+      size: 2222
+    - path: src/textnorm.py
+      hash: md5
+      md5: c7e2f072fe9cc4d2b5af76f5c360c6c0
+      size: 1844
+    params:
+      params.yaml:
+        diversity:
+          min_examples: 1000
+          min_system_prompts: 3
+          min_groups: 50
+          max_group_share: 0.1
+          min_answer_len_ratio: 1.6
+          max_same_length_share: 0.25
+          max_duplicate_answer_share: 0.3
+        paths.clean: data/clean.jsonl
+        split.group_key: topic
+    outs:
+    - path: metrics/diversity.json
+      hash: md5
+      md5: f2825f418b9e09844cc0db8ed803b9c5
+      size: 664
+  split:
+    cmd: python -m src.split
+    deps:
+    - path: data/clean.jsonl
+      hash: md5
+      md5: 7cfff82643faed2b0fc194fc2c95f83a
+      size: 2187471
+    - path: metrics/diversity.json
+      hash: md5
+      md5: f2825f418b9e09844cc0db8ed803b9c5
+      size: 664
+    - path: src/config.py
+      hash: md5
+      md5: 9e487ae55cd79a8a7582f0dfec84f671
+      size: 2094
+    - path: src/contamination.py
+      hash: md5
+      md5: 9293919fc5964067833313514c6f9f2b
+      size: 2249
+    - path: src/dedup.py
+      hash: md5
+      md5: fde80d28430f1612c4cbb7f0fdcc1f4d
+      size: 2757
+    - path: src/schema.py
+      hash: md5
+      md5: ad834fcb5caa483d3d5d5bfabb433cc0
+      size: 3054
+    - path: src/split.py
+      hash: md5
+      md5: 6d5c5942f25d929fec3a8427dd451745
+      size: 4046
+    - path: src/textnorm.py
+      hash: md5
+      md5: c7e2f072fe9cc4d2b5af76f5c360c6c0
+      size: 1844
+    params:
+      params.yaml:
+        clean.near_dup:
+          enabled: true
+          shingle_words: 4
+          num_perm: 64
+          threshold: 0.85
+        contamination:
+          threshold: 0.85
+        paths.clean: data/clean.jsonl
+        paths.test: data/test.jsonl
+        paths.train: data/train.jsonl
+        paths.val: data/val.jsonl
+        split:
+          group_key: topic
+          ratios:
+            train: 0.8
+            val: 0.1
+            test: 0.1
+          seed: 42
+    outs:
+    - path: data/test.jsonl
+      hash: md5
+      md5: 5b6e666d2e766cd523face0d64723e1d
+      size: 216031
+    - path: data/train.jsonl
+      hash: md5
+      md5: 4ecbe775163e492c692ba10b703567b3
+      size: 1752685
+    - path: data/val.jsonl
+      hash: md5
+      md5: 42e22c381ed0d6f60a61817d812fc790
+      size: 218755
+    - path: metrics/split.json
+      hash: md5
+      md5: 21dc838510ff521177d5d1377ac55554
+      size: 524

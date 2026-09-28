@@ -1,0 +1,84 @@
+# Единственная точка конфигурации ДЗ 3.
+# Ни один путь, порог или размер среза не должен появляться в коде строкой.
+
+collect:
+  # Версия датасета переключается ЗДЕСЬ. Всё остальное — следствие.
+  version: "v2"              # v1 | v2
+  n_rows: 3000               # строк из каждого файла-источника ПОСЛЕ фильтров
+  sources:
+    v1:
+      - "sources/medmcqa/data/train-00000-of-00001.parquet"
+    v2:
+      - "sources/medmcqa/data/train-00000-of-00001.parquet"
+      - "sources/medmcqa/data/validation-00000-of-00001.parquet"
+
+  # Источник — MedMCQA (openlifescienceai/medmcqa, Apache-2.0).
+  # Переработка источника описана в src/collect.py и отражена в datasheet.
+
+  subjects: null             # null — все предметы; список — сузить набор.
+                             # Следите за diversity.min_groups.
+
+  system_prompts:            # Инструкция разведена на варианты; вариант
+                             # выбирается детерминированно по id примера.
+    - "You answer multiple-choice questions from Indian medical entrance exams (AIIMS, NEET PG). The options are numbered from 0. Choose the single correct option. Reply with the option number and its text only, no explanation."
+    - "Below is a medical exam question with four options numbered from zero. Pick the one correct option and output its number and text. Do not explain."
+    - "Task: select the correct answer to a medical multiple-choice question. Options are numbered starting at 0. Output only the number and the text of the chosen option, without reasoning."
+    - "You help students prepare for medical postgraduate entrance exams. Given a question and options numbered from 0, name the single correct option: first its number, then its text. Add no commentary."
+    - "Answer the clinical multiple-choice question. Options are numbered from 0 and exactly one is correct. Output the number of the correct option followed by its text, and nothing else."
+
+clean:
+  # Фильтр длин: слишком короткий пример — обрезок, слишком длинный — выброс.
+  min_user_chars: 30
+  max_user_chars: 4000
+  min_assistant_chars: 2
+  near_dup:
+    enabled: true
+    shingle_words: 4         # длина словного шингла
+    num_perm: 64             # перестановок MinHash: точность против скорости
+    threshold: 0.85          # Жаккар выше порога — почти-дубль
+  pii:
+    enabled: true            # стадия обязательна, даже если счётчик нулевой
+
+diversity:
+  # Пороги, которым обязан удовлетворять ОЧИЩЕННЫЙ датасет. Стадия diversity
+  # падает, если нарушен хоть один: набор из 30 однотипных строк проходит
+  # и схему, и дедупликацию, и сплит — формально он безупречен и бесполезен.
+  #
+  # Пороги — не догма: их можно менять под свою задачу, но только в эту сторону
+  # и только с обоснованием в docs/datasheet.md. «Снизил, чтобы позеленело» —
+  # не обоснование.
+
+  min_examples: 1000         # строк после очистки
+  min_system_prompts: 3      # различных системных промптов
+  min_groups: 50             # различных групп (split.group_key)
+  max_group_share: 0.10      # доля крупнейшей группы
+  min_answer_len_ratio: 1.6  # p90/p10 длин ответа ассистента
+  max_same_length_share: 0.25   # доля примеров с самой частой длиной ответа
+  max_duplicate_answer_share: 0.30  # доля ответов-повторов (точные совпадения)
+
+split:
+  # Группа сплита. Вопросы одной темы не должны разъезжаться по train/test:
+  # текст темы дословно входит в промпт, а вопросы внутри темы — парафразы.
+  group_key: "topic"
+  ratios:
+    train: 0.8
+    val: 0.1
+    test: 0.1
+  seed: 42
+
+contamination:
+  # Порог поиска near-dup пересечений train/test.
+  # Обязан совпадать с clean.near_dup.threshold.
+  threshold: 0.85
+
+paths:
+  raw: "data/raw.jsonl"
+  clean: "data/clean.jsonl"
+  train: "data/train.jsonl"
+  val: "data/val.jsonl"
+  test: "data/test.jsonl"
+  metrics_collect: "metrics/collect.json"
+  metrics_clean: "metrics/clean.json"
+  metrics_split: "metrics/split.json"
+  metrics_diversity: "metrics/diversity.json"
+  datasheet: "docs/datasheet.md"
