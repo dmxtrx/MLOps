@@ -1,0 +1,64 @@
+# Единственная точка конфигурации ДЗ 5. В src/ нет ни имени модели,
+# ни learning rate, ни путей.
+model:
+  name: "Qwen/Qwen3-0.6B"
+  device: "auto"            # auto | cpu | cuda | mps
+  # Базовые веса в bfloat16: они заморожены, точность им не нужна, а память
+  # и время уходят вдвое. Сами матрицы LoRA peft держит в float32 — там идут
+  # крошечные обновления AdamW. На старом CPU без bf16 ставьте float32.
+  dtype: "bfloat16"
+  enable_thinking: false    # как в ДЗ 4: шаблон должен совпадать с обучением
+
+data:
+  # Выход стадии tokenize из ДЗ 4. У студента — свой путь.
+  train: "data/tokenized/train.pt"
+  val: "data/tokenized/val.pt"
+
+lora:
+  r: 8
+  alpha: 16                 # итоговый масштаб апдейта alpha / r = 2
+  dropout: 0.05
+  # Только проекции внимания и MLP. embed_tokens и lm_head — это 155 млн
+  # параметров каждый; в modules_to_save они уезжают в адаптер целиком.
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+train:
+  seed: 42
+  epochs: 1
+  batch_size: 2
+  grad_accum: 4             # эффективный батч = 8: память как у батча 2, шаг как у батча 8
+  lr: 2.0e-4
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  eval_every: 10            # шагов оптимизатора между замерами val loss
+  # Логиты на весь словарь: 151 936 x 4 байта на токен. Наши последовательности
+  # короче курсовых (288 против 512), поэтому батч оценки 4 — это ~0,7 ГБ логитов.
+  eval_batch_size: 4
+  gradient_checkpointing: true   # без него на ноутбуке с 16–32 ГБ не влезает
+  max_steps: null           # null — по эпохам; число — обрезать (smoke-тесты)
+
+# Эксперимент по слоям: второй прогон без адаптеров на первых N слоях.
+variants:
+  - name: "all_layers"
+    freeze_first: 0
+  - name: "freeze14"
+    freeze_first: 14
+
+compare:
+  max_new_tokens: 40
+  # Пять фиксированных промптов из МОЕГО датасета (test.jsonl ДЗ 3 — эти вопросы
+  # не участвовали ни в обучении, ни в валидации): база против адаптера на своей задаче.
+  prompts:
+    - "Subject:\nAnatomy\nTopic: Urinary tract\n\nQuestion:\nChronic urethral obstruction due to benign prismatic hyperplasia can lead to the following change in kidney parenchyma\n\nOptions:\n0. Hyperplasia\n1. Hyperophy\n2. Atrophy\n3. Dyplasia"
+    - "Subject:\nMicrobiology\nTopic: Mycology\n\nQuestion:\nWhat is the most probable poal of entry of Aspergillus?\n\nOptions:\n0. Puncture wound\n1. Blood\n2. Lungs\n3. Gastrointestinal tract"
+    - "Subject:\nMicrobiology\nTopic: Bacteria\n\nQuestion:\nTest for diagnosis of pyogenic meningitis is?\n\nOptions:\n0. Widal\n1. CSF PCR\n2. CSF examination\n3. PET scan"
+    - "Subject:\nForensic Medicine\nTopic: Sexual Offenses\n\nQuestion:\nWhich of the following condition is necessary prerequisite for this change?\n\nOptions:\n0. Rupture of membranes\n1. Scanty liquor amnii\n2. Adequate liquor amnii\n3. Air inside the uterine cavity"
+    - "Subject:\nBiochemistry\nTopic: vitamins\n\nQuestion:\nWhich of the following vitamin reduces the risk of insulin resistance, obesity, and the metabolic syndrome?\n\nOptions:\n0. Vitamin A\n1. Vitamin C\n2. Vitamin D\n3. Vitamin B12"
+  system: "Task: select the correct answer to a medical multiple-choice question. Options are numbered starting at 0. Output only the number and the text of the chosen option, without reasoning."
+
+paths:
+  models: "models"
+  metrics: "metrics"
+  curves: "docs/curves.png"
+  compare: "docs/compare.md"

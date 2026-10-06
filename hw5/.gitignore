@@ -1,0 +1,9 @@
+data/
+models/
+metrics/*.json
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.html
+.check_*.log
