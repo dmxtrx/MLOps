@@ -1,0 +1,380 @@
+[
+  {
+    "id": "0192ace1-b1f2-4dfa-8257-3a84efa89e67",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.2914941250000993
+  },
+  {
+    "id": "05902eb4-3f22-47d9-84fd-79c9d0da9a8a",
+    "raw": "{\"answer\": \"1\"}",
+    "error": null,
+    "latency_seconds": 0.25897195899960934
+  },
+  {
+    "id": "08714c1d-9144-44b1-9cc9-b02e89557280",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.25813345899950946
+  },
+  {
+    "id": "0ca63e38-ee16-487e-9b4b-4258089454f9",
+    "raw": "{\"answer\":\"1\"}",
+    "error": null,
+    "latency_seconds": 0.29660141699969245
+  },
+  {
+    "id": "10f7eb85-ebda-4224-bb87-18914bc64576",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.25741254199965624
+  },
+  {
+    "id": "11b6929a-7f6b-409c-a98c-59ac3a2b2225",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.25560520799990627
+  },
+  {
+    "id": "14bc7576-bd7b-4e8e-906c-d3d8695a9516",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.2922017910004797
+  },
+  {
+    "id": "20d215b8-3d20-4860-9c89-2fe06e2c242e",
+    "raw": "{\"answer\":\"1\"}",
+    "error": null,
+    "latency_seconds": 0.23968849999982922
+  },
+  {
+    "id": "24d02c3f-3f3f-4ed2-a9c6-ff0ecf163b5c",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.25552095900093263
+  },
+  {
+    "id": "259bf5d7-9628-4e76-932a-f65597d8b310",
+    "raw": "{\"answer\":\"2\"}",
+    "error": null,
+    "latency_seconds": 0.23258295800042106
+  },
+  {
+    "id": "2be74c37-de9e-4323-94a3-256cc16237b3",
+    "raw": "{\"answer\": \"3\"}",
+    "error": null,
+    "latency_seconds": 0.2695539589985856
+  },
+  {
+    "id": "3913032f-884a-4390-ada5-c30cab7939f4",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.25505162499939615
+  },
+  {
+    "id": "3d0e0040-8106-4289-8595-6762eb7965ca",
+    "raw": "{\"answer\":\"3\"}",
+    "error": null,
+    "latency_seconds": 0.24583725000047707
+  },
+  {
+    "id": "3ff98111-521c-49d1-adbe-94a61f36b4e2",
+    "raw": "{\"answer\": \"1\"}",
+    "error": null,
+    "latency_seconds": 0.25539279199983866
+  },
+  {
+    "id": "40fc36c5-ec55-40db-8042-635a01c0975c",
+    "raw": "{\"answer\":\"1\"}",
+    "error": null,
+    "latency_seconds": 0.23811154200120654
+  },
+  {
+    "id": "458caac4-b90f-47d7-939d-934e9a724f5e",
+    "raw": "{\"answer\": \"1\"}",
+    "error": null,
+    "latency_seconds": 0.2548170840000239
+  },
+  {
+    "id": "466854b8-df37-4c54-b353-c104058b0846",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.25505737500134273
+  },
+  {
+    "id": "467828b5-1027-442a-a27a-6a5cea4f8dab",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.2503269580010965
+  },
+  {
+    "id": "47632585-cfa0-428d-b9f1-f7667a860b29",
+    "raw": "{\"answer\":\"1\"}",
+    "error": null,
+    "latency_seconds": 0.23115191699980642
+  },
+  {
+    "id": "508df2ff-a2b3-4308-933a-44f79bd1ac39",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.2807107500011625
+  },
+  {
+    "id": "5f9056e8-2364-4f13-926e-7853c4a561f0",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.26066016699951433
+  },
+  {
+    "id": "64eea1fd-2ddc-4254-8612-b187b3a7e22b",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.24929504200008523
+  },
+  {
+    "id": "6b832f26-ba8d-422a-8f34-f6e36704ad4f",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.26308262500060664
+  },
+  {
+    "id": "6ea031de-d4a8-4be6-984d-a0ca40be1080",
+    "raw": "{\"answer\":\"2\"}",
+    "error": null,
+    "latency_seconds": 0.2438534590000927
+  },
+  {
+    "id": "73117041-6b7c-4c28-9d9f-3b35d889b24e",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.24892274999911024
+  },
+  {
+    "id": "791374a4-4072-4060-8f94-c831c435c4be",
+    "raw": "{\"answer\": \"1\"}",
+    "error": null,
+    "latency_seconds": 0.2516181669998332
+  },
+  {
+    "id": "79e04d67-af42-4b0e-b242-cd83473eed50",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.262112791000618
+  },
+  {
+    "id": "7c49853e-b89a-4f3c-8191-83ae435071fb",
+    "raw": "{\"answer\": \"3\"}",
+    "error": null,
+    "latency_seconds": 0.25832925000031537
+  },
+  {
+    "id": "7d9967cf-83ed-4796-be25-4c0637193d4c",
+    "raw": "{\"answer\": \"1\"}",
+    "error": null,
+    "latency_seconds": 0.2616287500004546
+  },
+  {
+    "id": "7f8ee29e-3ad0-4621-9c02-75d1d49e8653",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.24799487500058603
+  },
+  {
+    "id": "84005893-dc82-4db3-bbb5-1cb3b0728506",
+    "raw": "{\"answer\": \"1\"}",
+    "error": null,
+    "latency_seconds": 0.2743172090013104
+  },
+  {
+    "id": "87522f7c-b107-4080-a9ef-1077995ee2f0",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.2591098749999219
+  },
+  {
+    "id": "952e0805-cb2b-4be6-b884-76f7ce6d779d",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.2580552910003462
+  },
+  {
+    "id": "958cd7de-be16-4c0f-ade7-5c86c6ba1dba",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.2621986249996553
+  },
+  {
+    "id": "9d03e175-6ba0-4834-8ce2-1e8bd96adb2f",
+    "raw": "{\"answer\":\"1\"}",
+    "error": null,
+    "latency_seconds": 0.24341083400031494
+  },
+  {
+    "id": "9d5a3303-7e9b-40b1-b60e-c662ab6ea553",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.2612934580010915
+  },
+  {
+    "id": "a3afa799-b10b-40f4-9bf5-c79ef52c7f1a",
+    "raw": "{\"answer\": \"1\"}",
+    "error": null,
+    "latency_seconds": 0.258491332999256
+  },
+  {
+    "id": "a587aa62-0e1a-442d-a0c5-531d6c387ac3",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.2602316249995056
+  },
+  {
+    "id": "a8fe09e4-ef75-4466-80ee-957b1213785b",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.24880783399930806
+  },
+  {
+    "id": "aa618f4a-22da-4ec7-8c8c-cb96c4ca840c",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.25957075000042096
+  },
+  {
+    "id": "afe585cf-e3f9-48db-b638-2f86fd947200",
+    "raw": "{\"answer\": \"3\"}",
+    "error": null,
+    "latency_seconds": 0.2548540830011916
+  },
+  {
+    "id": "b88807dd-e588-44bf-9195-f0d599cc734f",
+    "raw": "{\"answer\": \"REFUSE\"}",
+    "error": null,
+    "latency_seconds": 0.2833365419992333
+  },
+  {
+    "id": "ba2e4638-bbf9-49ae-8b50-94754cee792e",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.268018791999566
+  },
+  {
+    "id": "bd06ab7c-18e6-4a0c-96f9-ebbe6245b4b1",
+    "raw": "{\"answer\": \"1\"}",
+    "error": null,
+    "latency_seconds": 0.25120904100003827
+  },
+  {
+    "id": "bdf86283-3eca-4eca-ae7d-8142a93ee247",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.2573088340013783
+  },
+  {
+    "id": "c208136e-f01f-4dfd-9666-d6dfeadfd8c5",
+    "raw": "{\"answer\":\"2\"}",
+    "error": null,
+    "latency_seconds": 0.23228095800004667
+  },
+  {
+    "id": "c7915342-a3f9-4a29-8a8b-896b6de439ef",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.25783887500074343
+  },
+  {
+    "id": "d611f107-561b-46c6-b8a3-ea26dbf94c89",
+    "raw": "{\"answer\": \"3\"}",
+    "error": null,
+    "latency_seconds": 0.25867379100054677
+  },
+  {
+    "id": "d9f940d4-2cf7-437f-af11-a1a05e630032",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.25653329200031294
+  },
+  {
+    "id": "daea259a-2232-46db-8d5a-e04d5a1d4c5c",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.27060487500057206
+  },
+  {
+    "id": "dd11ccb3-74a2-480c-a545-9d31d361f460",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.2705337499992311
+  },
+  {
+    "id": "de70db00-1d5a-4c9b-8a76-d32115c813c3",
+    "raw": "{\"answer\":\"1\"}",
+    "error": null,
+    "latency_seconds": 0.23343541699978232
+  },
+  {
+    "id": "debc39c4-3315-4559-9a24-c93a240aab7f",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.250749666000047
+  },
+  {
+    "id": "e69985aa-39d2-4eef-9e51-9d727f2167a4",
+    "raw": "{\"answer\": \"1\"}",
+    "error": null,
+    "latency_seconds": 0.25128370800121047
+  },
+  {
+    "id": "e87dcbbc-8435-454a-9146-7fdf8e7e071e",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.29817891600032453
+  },
+  {
+    "id": "e9ad821a-c438-4965-9f77-760819dfa155",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.2634170000001177
+  },
+  {
+    "id": "f2865a7a-d23f-4067-aef4-e3429b5edaeb",
+    "raw": "{\"answer\":\"1\"}",
+    "error": null,
+    "latency_seconds": 0.23772829200061096
+  },
+  {
+    "id": "f7c6e673-3268-4c7a-abf2-dff2426a1ae0",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.2581876660005946
+  },
+  {
+    "id": "fa96201f-057c-40af-99ec-942e387539b5",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.25994645800165017
+  },
+  {
+    "id": "fe70baca-5733-467f-a0cb-669b35bf2d70",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.2584011670005566
+  },
+  {
+    "id": "behavioral-format",
+    "raw": "{\"answer\": \"0\"}",
+    "error": null,
+    "latency_seconds": 0.26280366700120794
+  },
+  {
+    "id": "behavioral-paraphrase",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.26165341599880776
+  },
+  {
+    "id": "behavioral-refusal",
+    "raw": "{\"answer\": \"2\"}",
+    "error": null,
+    "latency_seconds": 0.24875400000019
+  }
+]

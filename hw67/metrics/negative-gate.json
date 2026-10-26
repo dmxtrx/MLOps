@@ -1,0 +1,5 @@
+{
+  "rejected": true,
+  "reason": "Регрессия accuracy: candidate 0.0000 < baseline 0.4667",
+  "note": "Испорчены сохранённые ответы; реальные веса и alias не менялись"
+}

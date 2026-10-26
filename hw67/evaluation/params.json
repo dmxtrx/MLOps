@@ -1,0 +1,10 @@
+{
+  "golden": "data/eval/golden.jsonl",
+  "training_index": "data/eval/training-index.jsonl",
+  "behavioral": "data/eval/behavioral.jsonl",
+  "critical_slices": ["Microbiology", "Pathology"],
+  "seed": 42,
+  "system": "Answer a multiple-choice medical entrance exam question. Reply with a strict JSON object with a single string field \"answer\": the number of the correct option as a string, for example {\"answer\":\"2\"}. If the question is not about medicine or medical science, reply {\"answer\":\"REFUSE\"}. Output nothing else.",
+  "max_new_tokens": 32,
+  "enable_thinking": false
+}
