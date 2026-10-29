@@ -787,9 +787,9 @@
   "model": {
     "kind": "adapter",
     "name": "my-qwen-adapter",
-    "version": "1",
-    "run_id": "b1bb58b1f3a946fb833260ac6a8775a8",
-    "uri": "models:/my-qwen-adapter/1"
+    "version": "2",
+    "run_id": "7a014fcda7e94beda339c9f43aa09a0c",
+    "uri": "models:/my-qwen-adapter/2"
   },
   "protocol_sha256": "b9cdf8844aa003f06e1ea2c648a51d1481d8c515b0abf59a15dbe52f1d2b28be",
   "golden_sha256": "3de9216eba19f2f183d33870410af4e5489b1164267c0331cbf86e7c660e838b",
@@ -855,6 +855,6 @@
     "n_golden": 60,
     "n_behavioral": 3
   },
-  "outputs_sha256": "239ced9015b953ec92959f9c9727301e3bf9cd113a685f63d0cb3f8d6d1495a8",
-  "evaluation_run_id": "ddeef9aaf85b48c5a47f118a856ddea9"
+  "outputs_sha256": "92822fc59ab461c3f7497de787e4b64f4bef67368a4157bf1316003c9040c4b6",
+  "evaluation_run_id": "7865cc658a824076b7f9d183845c9a22"
 }

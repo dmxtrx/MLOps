@@ -3,378 +3,378 @@
     "id": "0192ace1-b1f2-4dfa-8257-3a84efa89e67",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.4192439580001519
+    "latency_seconds": 0.3750559170002816
   },
   {
     "id": "05902eb4-3f22-47d9-84fd-79c9d0da9a8a",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.2345237499994255
+    "latency_seconds": 0.23389866700017592
   },
   {
     "id": "08714c1d-9144-44b1-9cc9-b02e89557280",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23416208399976313
+    "latency_seconds": 0.2364803340005892
   },
   {
     "id": "0ca63e38-ee16-487e-9b4b-4258089454f9",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.3449662500006525
+    "latency_seconds": 0.2440457079992484
   },
   {
     "id": "10f7eb85-ebda-4224-bb87-18914bc64576",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23236633300075482
+    "latency_seconds": 0.235244875000717
   },
   {
     "id": "11b6929a-7f6b-409c-a98c-59ac3a2b2225",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.2320089580007334
+    "latency_seconds": 0.2328812919986376
   },
   {
     "id": "14bc7576-bd7b-4e8e-906c-d3d8695a9516",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.26552941699992516
+    "latency_seconds": 0.23664879200077849
   },
   {
     "id": "20d215b8-3d20-4860-9c89-2fe06e2c242e",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.24131941700034076
+    "latency_seconds": 0.237924416000169
   },
   {
     "id": "24d02c3f-3f3f-4ed2-a9c6-ff0ecf163b5c",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23307349999959115
+    "latency_seconds": 0.23142558300060045
   },
   {
     "id": "259bf5d7-9628-4e76-932a-f65597d8b310",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23286308400020062
+    "latency_seconds": 0.2322546670002339
   },
   {
     "id": "2be74c37-de9e-4323-94a3-256cc16237b3",
     "raw": "{\"answer\": \"3\"}",
     "error": null,
-    "latency_seconds": 0.24420808299873897
+    "latency_seconds": 0.24441904200102726
   },
   {
     "id": "3913032f-884a-4390-ada5-c30cab7939f4",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.23403583300023456
+    "latency_seconds": 0.232244749999154
   },
   {
     "id": "3d0e0040-8106-4289-8595-6762eb7965ca",
     "raw": "{\"answer\": \"3\"}",
     "error": null,
-    "latency_seconds": 0.24742737499946088
+    "latency_seconds": 0.24443916600102966
   },
   {
     "id": "3ff98111-521c-49d1-adbe-94a61f36b4e2",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.23099675000048592
+    "latency_seconds": 0.23271979200035275
   },
   {
     "id": "40fc36c5-ec55-40db-8042-635a01c0975c",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.2388220420016296
+    "latency_seconds": 0.23708425000040734
   },
   {
     "id": "458caac4-b90f-47d7-939d-934e9a724f5e",
     "raw": "{\"answer\": \"3\"}",
     "error": null,
-    "latency_seconds": 0.2314321670000936
+    "latency_seconds": 0.23305633299969486
   },
   {
     "id": "466854b8-df37-4c54-b353-c104058b0846",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23661625000022468
+    "latency_seconds": 0.23331354200126952
   },
   {
     "id": "467828b5-1027-442a-a27a-6a5cea4f8dab",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.22714679099954083
+    "latency_seconds": 0.22752791700077069
   },
   {
     "id": "47632585-cfa0-428d-b9f1-f7667a860b29",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.23507654199966055
+    "latency_seconds": 0.2317049590001261
   },
   {
     "id": "508df2ff-a2b3-4308-933a-44f79bd1ac39",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.2545320829995035
+    "latency_seconds": 0.2278514580011688
   },
   {
     "id": "5f9056e8-2364-4f13-926e-7853c4a561f0",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.23515575000055833
+    "latency_seconds": 0.23617316700074298
   },
   {
     "id": "64eea1fd-2ddc-4254-8612-b187b3a7e22b",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.2258613329995569
+    "latency_seconds": 0.22649887499937904
   },
   {
     "id": "6b832f26-ba8d-422a-8f34-f6e36704ad4f",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.2362367079986143
+    "latency_seconds": 0.23724679200131504
   },
   {
     "id": "6ea031de-d4a8-4be6-984d-a0ca40be1080",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.24354499999935797
+    "latency_seconds": 0.24296258300091722
   },
   {
     "id": "73117041-6b7c-4c28-9d9f-3b35d889b24e",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.22775483399891527
+    "latency_seconds": 0.22526833300071303
   },
   {
     "id": "791374a4-4072-4060-8f94-c831c435c4be",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.22735766699952364
+    "latency_seconds": 0.22617416699904425
   },
   {
     "id": "79e04d67-af42-4b0e-b242-cd83473eed50",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.2391040830007114
+    "latency_seconds": 0.23719920800067484
   },
   {
     "id": "7c49853e-b89a-4f3c-8191-83ae435071fb",
     "raw": "{\"answer\": \"3\"}",
     "error": null,
-    "latency_seconds": 0.23516583400123636
+    "latency_seconds": 0.23356704199977685
   },
   {
     "id": "7d9967cf-83ed-4796-be25-4c0637193d4c",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.23839329200018256
+    "latency_seconds": 0.23747054199884587
   },
   {
     "id": "7f8ee29e-3ad0-4621-9c02-75d1d49e8653",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.22819129199888266
+    "latency_seconds": 0.22654558300018834
   },
   {
     "id": "84005893-dc82-4db3-bbb5-1cb3b0728506",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.24932425000042713
+    "latency_seconds": 0.24839029200120422
   },
   {
     "id": "87522f7c-b107-4080-a9ef-1077995ee2f0",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.2367073329987761
+    "latency_seconds": 0.23489183300080185
   },
   {
     "id": "952e0805-cb2b-4be6-b884-76f7ce6d779d",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23388270899886265
+    "latency_seconds": 0.23177724999914062
   },
   {
     "id": "958cd7de-be16-4c0f-ade7-5c86c6ba1dba",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.2385204160000285
+    "latency_seconds": 0.23752575000071374
   },
   {
     "id": "9d03e175-6ba0-4834-8ce2-1e8bd96adb2f",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.24639570799990906
+    "latency_seconds": 0.24392824999995355
   },
   {
     "id": "9d5a3303-7e9b-40b1-b60e-c662ab6ea553",
     "raw": "{\"answer\": \"3\"}",
     "error": null,
-    "latency_seconds": 0.23765029199967103
+    "latency_seconds": 0.23747337500026333
   },
   {
     "id": "a3afa799-b10b-40f4-9bf5-c79ef52c7f1a",
     "raw": "{\"answer\": \"3\"}",
     "error": null,
-    "latency_seconds": 0.23497208299886552
+    "latency_seconds": 0.23349383400091028
   },
   {
     "id": "a587aa62-0e1a-442d-a0c5-531d6c387ac3",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23337054200055718
+    "latency_seconds": 0.23411612500058254
   },
   {
     "id": "a8fe09e4-ef75-4466-80ee-957b1213785b",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.22517854099896795
+    "latency_seconds": 0.22458616600124515
   },
   {
     "id": "aa618f4a-22da-4ec7-8c8c-cb96c4ca840c",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23544541699993715
+    "latency_seconds": 0.2346760840009665
   },
   {
     "id": "afe585cf-e3f9-48db-b638-2f86fd947200",
     "raw": "{\"answer\": \"3\"}",
     "error": null,
-    "latency_seconds": 0.23389179199875798
+    "latency_seconds": 0.23310425000090618
   },
   {
     "id": "b88807dd-e588-44bf-9195-f0d599cc734f",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.2354569580002135
+    "latency_seconds": 0.23632179100059147
   },
   {
     "id": "ba2e4638-bbf9-49ae-8b50-94754cee792e",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.24377470800027368
+    "latency_seconds": 0.24693016699893633
   },
   {
     "id": "bd06ab7c-18e6-4a0c-96f9-ebbe6245b4b1",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.22708466599942767
+    "latency_seconds": 0.22799829200084787
   },
   {
     "id": "bdf86283-3eca-4eca-ae7d-8142a93ee247",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.2358373750012106
+    "latency_seconds": 0.23384695800086774
   },
   {
     "id": "c208136e-f01f-4dfd-9666-d6dfeadfd8c5",
     "raw": "{\"answer\":\"2\"}",
     "error": null,
-    "latency_seconds": 0.21492483300062304
+    "latency_seconds": 0.21174066700041294
   },
   {
     "id": "c7915342-a3f9-4a29-8a8b-896b6de439ef",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23559241599832603
+    "latency_seconds": 0.23518262499965203
   },
   {
     "id": "d611f107-561b-46c6-b8a3-ea26dbf94c89",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23295629200038093
+    "latency_seconds": 0.23304654200001096
   },
   {
     "id": "d9f940d4-2cf7-437f-af11-a1a05e630032",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.2326784580000094
+    "latency_seconds": 0.23258441699908872
   },
   {
     "id": "daea259a-2232-46db-8d5a-e04d5a1d4c5c",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.2483185830005823
+    "latency_seconds": 0.24558975000036298
   },
   {
     "id": "dd11ccb3-74a2-480c-a545-9d31d361f460",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.24684866600000532
+    "latency_seconds": 0.2456670830015355
   },
   {
     "id": "de70db00-1d5a-4c9b-8a76-d32115c813c3",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.2363136250005482
+    "latency_seconds": 0.23531829200146603
   },
   {
     "id": "debc39c4-3315-4559-9a24-c93a240aab7f",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.22655554199991457
+    "latency_seconds": 0.2254627079983038
   },
   {
     "id": "e69985aa-39d2-4eef-9e51-9d727f2167a4",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.2250357079992682
+    "latency_seconds": 0.22568266599955678
   },
   {
     "id": "e87dcbbc-8435-454a-9146-7fdf8e7e071e",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.26953079200029606
+    "latency_seconds": 0.26959154100040905
   },
   {
     "id": "e9ad821a-c438-4965-9f77-760819dfa155",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.236092874998576
+    "latency_seconds": 0.23709191600028134
   },
   {
     "id": "f2865a7a-d23f-4067-aef4-e3429b5edaeb",
     "raw": "{\"answer\": \"1\"}",
     "error": null,
-    "latency_seconds": 0.2376959170014743
+    "latency_seconds": 0.2405311669990624
   },
   {
     "id": "f7c6e673-3268-4c7a-abf2-dff2426a1ae0",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.23528195800099638
+    "latency_seconds": 0.23484137500054203
   },
   {
     "id": "fa96201f-057c-40af-99ec-942e387539b5",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.2369446249995235
+    "latency_seconds": 0.23600070900101855
   },
   {
     "id": "fe70baca-5733-467f-a0cb-669b35bf2d70",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.23466866699891398
+    "latency_seconds": 0.24504395800067869
   },
   {
     "id": "behavioral-format",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.23349841600065702
+    "latency_seconds": 0.2505280000004859
   },
   {
     "id": "behavioral-paraphrase",
     "raw": "{\"answer\": \"0\"}",
     "error": null,
-    "latency_seconds": 0.2375172920001205
+    "latency_seconds": 0.2823395420000452
   },
   {
     "id": "behavioral-refusal",
     "raw": "{\"answer\": \"2\"}",
     "error": null,
-    "latency_seconds": 0.22659562500120956
+    "latency_seconds": 0.2607678330005001
   }
 ]
