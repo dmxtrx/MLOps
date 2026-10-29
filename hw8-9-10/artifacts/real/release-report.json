@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "passed": false,
+  "reason": "candidate: behavioral пройден 2/3",
+  "model_id": "models:/my-qwen-adapter/2",
+  "evaluation_run_id": "7865cc658a824076b7f9d183845c9a22",
+  "metrics": {
+    "accuracy": 0.4666666666666667,
+    "format_rate": 1.0
+  },
+  "sources": {
+    "baseline_eval": {
+      "uri": "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw6-7/metrics/baseline-eval.json",
+      "sha256": "0f00ada39fc952113e693bfcd9f4fa86b7dea499a78a5ffd0470fd9d392c36db"
+    },
+    "candidate_eval": {
+      "uri": "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw6-7/metrics/candidate-eval.json",
+      "sha256": "fdef8bbadddd07b4d90de890a9393523844198271eff8b2205aa8fde2adaa52b"
+    },
+    "baseline_outputs": {
+      "uri": "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw6-7/metrics/baseline-outputs.json",
+      "sha256": "992fa70560f4df1a3d1df6b036f5a23e94168a602fda42bfb79d08458d478bb5"
+    },
+    "candidate_outputs": {
+      "uri": "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw6-7/metrics/candidate-outputs.json",
+      "sha256": "1f412afa51662944654efab7f277bd3de1887ec00c44cd4618cb791713e155d4"
+    }
+  }
+}

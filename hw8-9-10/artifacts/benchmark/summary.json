@@ -1,0 +1,39 @@
+{
+  "protocol": {
+    "count_per_mode": 8,
+    "modes": [
+      1,
+      2
+    ],
+    "same_prompts": true
+  },
+  "summaries": [
+    {
+      "mode": "concurrency-1",
+      "n": 8,
+      "successes": 8,
+      "errors": 0,
+      "batch_seconds": 2.3538279159984086,
+      "successful_requests_per_second": 3.398719144091164,
+      "mean_success_client_seconds": 0.29373052075061423,
+      "max_success_client_seconds": 0.45858812499500345,
+      "max_new_tokens": 32
+    },
+    {
+      "mode": "concurrency-2",
+      "n": 8,
+      "successes": 8,
+      "errors": 0,
+      "batch_seconds": 2.167125334002776,
+      "successful_requests_per_second": 3.691526223461957,
+      "mean_success_client_seconds": 0.5075668541248888,
+      "max_success_client_seconds": 0.5500729999912437,
+      "max_new_tokens": 32
+    }
+  ],
+  "limitations": [
+    "Маленькая локальная выборка; p95 не оценивается",
+    "Backend сериализует генерацию через один semaphore",
+    "TTFT и ITL не измерялись для единого JSON-ответа"
+  ]
+}

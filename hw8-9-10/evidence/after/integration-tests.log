@@ -1,0 +1,11 @@
+test_invalid_reports_rejected_without_pointer_change (test_integration.IntegrationTests.test_invalid_reports_rejected_without_pointer_change) ... ok
+test_invalid_requests_do_not_call_backend (test_integration.IntegrationTests.test_invalid_requests_do_not_call_backend) ... ok
+test_loaded_version_survives_pointer_change_restart_and_rollback (test_integration.IntegrationTests.test_loaded_version_survives_pointer_change_restart_and_rollback) ... ok
+test_readiness_blocks_generation_until_warmup (test_integration.IntegrationTests.test_readiness_blocks_generation_until_warmup) ... ok
+test_recovery_and_input_invalidation_across_processes (test_integration.IntegrationTests.test_recovery_and_input_invalidation_across_processes) ... ok
+test_repeat_and_interrupted_publication_are_idempotent (test_integration.IntegrationTests.test_repeat_and_interrupted_publication_are_idempotent) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.610s
+
+OK

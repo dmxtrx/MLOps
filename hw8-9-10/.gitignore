@@ -1,0 +1,6 @@
+.venv/
+.lab*/
+__pycache__/
+*.pyc
+.prefect/
+evidence/workspaces/

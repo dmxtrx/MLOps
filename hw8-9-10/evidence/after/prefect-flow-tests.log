@@ -1,0 +1,6 @@
+test_failure_recovery_and_repeat_in_separate_processes (test_flow.PrefectFlowTests.test_failure_recovery_and_repeat_in_separate_processes) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 22.684s
+
+OK

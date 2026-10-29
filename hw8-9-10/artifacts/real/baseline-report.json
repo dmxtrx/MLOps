@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "passed": true,
+  "decision": "serve-previous-baseline",
+  "evaluation_run_id": "7865cc658a824076b7f9d183845c9a22",
+  "model_id": "baseline-qwen3-0.6b-c1899de2",
+  "model_sha256": "052d8c0b8c31f61d79bcbbcca49c85414118746986773d57fb6a56f58e5a0c09",
+  "protocol_sha256": "b9cdf8844aa003f06e1ea2c648a51d1481d8c515b0abf59a15dbe52f1d2b28be",
+  "golden_sha256": "3de9216eba19f2f183d33870410af4e5489b1164267c0331cbf86e7c660e838b",
+  "runtime_sha256": "1c8b6cfc1796b12f3c21933c977ecbb922d494403ff96b431680f90928d26f65",
+  "metrics": {
+    "accuracy": 0.4666666666666667,
+    "format_rate": 1.0
+  },
+  "sources": {
+    "baseline_eval": {
+      "uri": "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw6-7/metrics/baseline-eval.json",
+      "sha256": "0f00ada39fc952113e693bfcd9f4fa86b7dea499a78a5ffd0470fd9d392c36db"
+    },
+    "candidate_eval": {
+      "uri": "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw6-7/metrics/candidate-eval.json",
+      "sha256": "fdef8bbadddd07b4d90de890a9393523844198271eff8b2205aa8fde2adaa52b"
+    },
+    "baseline_outputs": {
+      "uri": "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw6-7/metrics/baseline-outputs.json",
+      "sha256": "992fa70560f4df1a3d1df6b036f5a23e94168a602fda42bfb79d08458d478bb5"
+    },
+    "candidate_outputs": {
+      "uri": "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw6-7/metrics/candidate-outputs.json",
+      "sha256": "1f412afa51662944654efab7f277bd3de1887ec00c44cd4618cb791713e155d4"
+    }
+  },
+  "candidate_release_report": {
+    "uri": "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/artifacts/real/release-report.json",
+    "sha256": "8876794c6e38e6ee99ddb63cd2e7c093c83606d8649d4430eb4b6f1ef1da6aa3"
+  }
+}

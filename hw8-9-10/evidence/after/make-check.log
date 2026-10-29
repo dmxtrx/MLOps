@@ -1,0 +1,29 @@
+.venv/bin/python -m compileall -q release.py lab.py flow.py service.py backends.py benchmark.py smoke_real.py tests
+.venv/bin/python -m unittest discover -s tests -v
+test_failure_recovery_and_repeat_in_separate_processes (test_flow.PrefectFlowTests.test_failure_recovery_and_repeat_in_separate_processes) ... ok
+test_invalid_reports_rejected_without_pointer_change (test_integration.IntegrationTests.test_invalid_reports_rejected_without_pointer_change) ... ok
+test_invalid_requests_do_not_call_backend (test_integration.IntegrationTests.test_invalid_requests_do_not_call_backend) ... ok
+test_loaded_version_survives_pointer_change_restart_and_rollback (test_integration.IntegrationTests.test_loaded_version_survives_pointer_change_restart_and_rollback) ... ok
+test_readiness_blocks_generation_until_warmup (test_integration.IntegrationTests.test_readiness_blocks_generation_until_warmup) ... ok
+test_recovery_and_input_invalidation_across_processes (test_integration.IntegrationTests.test_recovery_and_input_invalidation_across_processes) ... ok
+test_repeat_and_interrupted_publication_are_idempotent (test_integration.IntegrationTests.test_repeat_and_interrupted_publication_are_idempotent) ... ok
+test_accepted_baseline_is_bound_to_full_evaluation (test_real_artifacts.RealArtifactContractTests.test_accepted_baseline_is_bound_to_full_evaluation) ... ok
+test_candidate_rejection_is_preserved (test_real_artifacts.RealArtifactContractTests.test_candidate_rejection_is_preserved) ... ok
+test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests.test_changed_bytes_at_same_path_invalidate_cache) ... ok
+test_complete_bound_report_allowed (test_release.ReleaseContractTests.test_complete_bound_report_allowed) ... ok
+test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) ... ok
+test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseContractTests.test_failed_atomic_replace_preserves_previous_bytes) ... ok
+test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests.test_incomplete_false_and_truthy_string_rejected) ... ok
+test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests.test_invalid_digest_and_schema_rejected) ... ok
+test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) ... ok
+test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests.test_key_ignores_path_and_mapping_order) ... ok
+test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) ... ok
+test_publish_and_repeat (test_release.ReleaseContractTests.test_publish_and_repeat) ... ok
+test_rejection_preserves_previous_bytes (test_release.ReleaseContractTests.test_rejection_preserves_previous_bytes) ... ok
+test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_report_binding_mismatch_rejected) ... ok
+test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.test_runtime_change_with_stale_hash_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 17.382s
+
+OK

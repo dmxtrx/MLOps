@@ -7,10 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v6
         with:
           python-version: '3.12'
-      # Шаблон предполагает release.py и tests/ в корне репозитория.
-      # При вложенном проекте задайте working-directory для run.
-      - run: python -m compileall -q release.py tests
-      - run: python -m unittest discover -s tests -v
+      # Шаблон не является доказательством удалённого запуска или защиты merge.
+      - run: uv sync
+      - run: make check

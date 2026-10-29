@@ -1,0 +1,79 @@
+[
+  {
+    "stage": "initial-A",
+    "answer": "STUB ONLY: fixture-A",
+    "output_tokens": 1,
+    "model_id": "fixture-A",
+    "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+    "request_id": "f3906ba5-530b-4926-a080-ae4dfa4f43aa",
+    "queue_seconds": 2.166008925996721e-06,
+    "generation_seconds": 0.012539499992271885,
+    "total_seconds": 0.012541666001197882
+  },
+  {
+    "stage": "pointer-B-without-restart",
+    "answer": "STUB ONLY: fixture-A",
+    "output_tokens": 1,
+    "model_id": "fixture-A",
+    "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+    "request_id": "aa1c75b1-9c9f-4181-8038-9bfd1a376041",
+    "queue_seconds": 2.9999937396496534e-06,
+    "generation_seconds": 0.01237970900547225,
+    "total_seconds": 0.0123827089992119
+  },
+  {
+    "stage": "after-restart-B",
+    "answer": "STUB ONLY: fixture-B",
+    "output_tokens": 1,
+    "model_id": "fixture-B",
+    "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+    "request_id": "22b48a44-2954-40b9-8d79-04f7355e0571",
+    "queue_seconds": 2.3339962353929877e-06,
+    "generation_seconds": 0.012536958005512133,
+    "total_seconds": 0.012539292001747526
+  },
+  {
+    "stage": "rollback-pointer-A-without-restart",
+    "answer": "STUB ONLY: fixture-B",
+    "output_tokens": 1,
+    "model_id": "fixture-B",
+    "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+    "request_id": "eb13dadc-647c-4fdd-96d4-500e17546895",
+    "queue_seconds": 2.2080057533457875e-06,
+    "generation_seconds": 0.012542582990135998,
+    "total_seconds": 0.012544790995889343
+  },
+  {
+    "stage": "after-rollback-restart-A",
+    "answer": "STUB ONLY: fixture-A",
+    "output_tokens": 1,
+    "model_id": "fixture-A",
+    "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+    "request_id": "7475bc3e-84e4-4d91-86f3-cbbdb7cfa68e",
+    "queue_seconds": 2.707995008677244e-06,
+    "generation_seconds": 0.012533667002571747,
+    "total_seconds": 0.012536374997580424
+  },
+  {
+    "stage": "invalid-request",
+    "status": 422,
+    "calls_before": 1,
+    "calls_after": 1,
+    "response": {
+      "detail": [
+        {
+          "type": "string_too_short",
+          "loc": [
+            "body",
+            "prompt"
+          ],
+          "msg": "String should have at least 1 character",
+          "input": "",
+          "ctx": {
+            "min_length": 1
+          }
+        }
+      ]
+    }
+  }
+]

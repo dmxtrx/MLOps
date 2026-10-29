@@ -1,0 +1,446 @@
+test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests) ... FAIL
+test_complete_bound_report_allowed (test_release.ReleaseContractTests) ... ok
+test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) ... test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseContractTests) ... FAIL
+test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests) ... test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests) ... test_invalid_metric_rejected (test_release.ReleaseContractTests) ... test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests) ... FAIL
+test_missing_fields_rejected (test_release.ReleaseContractTests) ... test_publish_and_repeat (test_release.ReleaseContractTests) ... ok
+test_rejection_preserves_previous_bytes (test_release.ReleaseContractTests) ... ok
+test_report_binding_mismatch_rejected (test_release.ReleaseContractTests) ... test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests) ... 
+======================================================================
+FAIL: test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 42, in test_changed_bytes_at_same_path_invalidate_cache
+    self.assertNotEqual(old,release.cache_key(self.data,self.config))
+AssertionError: '899fb137a31303a886cb726727a5eb42252372b09eb60fe18084b87690f5d438' == '899fb137a31303a886cb726727a5eb42252372b09eb60fe18084b87690f5d438'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) (key='tokenizer_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+AssertionError: 'a83a4c7fdb8c509cd4c0964bcf3e4688c8395aab5345dd025a3337f635f5f674' == 'a83a4c7fdb8c509cd4c0964bcf3e4688c8395aab5345dd025a3337f635f5f674'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) (key='template_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+AssertionError: 'a83a4c7fdb8c509cd4c0964bcf3e4688c8395aab5345dd025a3337f635f5f674' == 'a83a4c7fdb8c509cd4c0964bcf3e4688c8395aab5345dd025a3337f635f5f674'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) (key='max_length')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+AssertionError: 'a83a4c7fdb8c509cd4c0964bcf3e4688c8395aab5345dd025a3337f635f5f674' == 'a83a4c7fdb8c509cd4c0964bcf3e4688c8395aab5345dd025a3337f635f5f674'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) (key='code_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+AssertionError: 'a83a4c7fdb8c509cd4c0964bcf3e4688c8395aab5345dd025a3337f635f5f674' == 'a83a4c7fdb8c509cd4c0964bcf3e4688c8395aab5345dd025a3337f635f5f674'
+
+======================================================================
+FAIL: test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 105, in test_failed_atomic_replace_preserves_previous_bytes
+    with self.assertRaises(OSError):release.publish(self.manifest,self.report,self.target)
+AssertionError: OSError not raised
+
+======================================================================
+FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests) (key='status', value='failed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests) (key='status', value='running')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests) (key='passed', value='true')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests) (key='evaluation_run_id', value='')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 57, in test_incomplete_false_and_truthy_string_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests) (key='schema_version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,self.report)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests) (key='schema_version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,self.report)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests) (key='model_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,self.report)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests) (key='model_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,self.report)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests) (key='artifact_uri')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 90, in test_invalid_digest_and_schema_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,self.report)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=nan, metric='accuracy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=nan, metric='format_rate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=inf, metric='accuracy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=inf, metric='format_rate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=-0.1, metric='accuracy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=-0.1, metric='format_rate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=1.1, metric='accuracy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=1.1, metric='format_rate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=True, metric='accuracy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=True, metric='format_rate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value='0.8', metric='accuracy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value='0.8', metric='format_rate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=None, metric='accuracy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_invalid_metric_rejected (test_release.ReleaseContractTests) (value=None, metric='format_rate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 84, in test_invalid_metric_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 38, in test_key_ignores_path_and_mapping_order
+    self.assertEqual(key,release.cache_key(other,dict(reversed(list(self.config.items())))))
+AssertionError: 'c12da8c795d9298ebeea86dbd9211c9c70e7c524adcd5024b9afefb96fa8c6a7' != '47c5fa2ced99547ebf0952f2daad453859041a99f048876af009e47c3500e290'
+- c12da8c795d9298ebeea86dbd9211c9c70e7c524adcd5024b9afefb96fa8c6a7
++ 47c5fa2ced99547ebf0952f2daad453859041a99f048876af009e47c3500e290
+
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='manifest', key='schema_version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='manifest', key='model_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='manifest', key='model_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='manifest', key='protocol_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='manifest', key='golden_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='manifest', key='runtime_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='manifest', key='runtime')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='manifest', key='artifact_uri')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='report', key='status')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='report', key='evaluation_run_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='report', key='model_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='report', key='model_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='report', key='protocol_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='report', key='golden_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='report', key='runtime_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_missing_fields_rejected (test_release.ReleaseContractTests) (side='report', key='metrics')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 65, in test_missing_fields_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,r)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests) (key='model_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests) (key='model_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests) (key='protocol_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests) (key='golden_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_report_binding_mismatch_rejected (test_release.ReleaseContractTests) (key='runtime_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 71, in test_report_binding_mismatch_rejected
+    with self.assertRaises(ValueError):release.validate_release(self.manifest,bad)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests) (key='dtype')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,self.report)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests) (key='template_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,self.report)
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests) (key='generation')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/tests/test_release.py", line 77, in test_runtime_change_with_stale_hash_rejected
+    with self.assertRaises(ValueError):release.validate_release(m,self.report)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.009s
+
+FAILED (failures=54)

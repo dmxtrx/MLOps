@@ -1,0 +1,22 @@
+WORKSPACE=evidence/workspaces/reject-AqmuSy/lab
+Создан синтетический стенд: evidence/workspaces/reject-AqmuSy/lab
+--- accepted SHA-256 before ---
+aca0bc1332936349f868b84d800dec94e1a042f4aec3196fe4c4c031c3b5c6d1  evidence/workspaces/reject-AqmuSy/lab/accepted.json
+PREPARED 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4 8dcef6afa40c9a9f7c3be11715ebdfa56b62e5a028234a5d9744c3a41ef49ac9
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/lab.py", line 168, in <module>
+    main()
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/lab.py", line 164, in main
+    run(args.workspace, args.report, args.fail_after_prepare, args.fail_after_accept)
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/lab.py", line 110, in run
+    return publish(root, prepared, manifest, report, report_name, fail_after_accept)
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/lab.py", line 119, in publish
+    publication_id = release.release_id(manifest, report)
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/release.py", line 97, in release_id
+    validate_release(manifest, report)
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/release.py", line 52, in validate_release
+    raise ValueError("Оценка не завершена")
+ValueError: Оценка не завершена
+REJECT_EXIT=1
+--- accepted SHA-256 after rejected report ---
+aca0bc1332936349f868b84d800dec94e1a042f4aec3196fe4c4c031c3b5c6d1  evidence/workspaces/reject-AqmuSy/lab/accepted.json

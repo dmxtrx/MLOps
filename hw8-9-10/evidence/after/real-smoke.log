@@ -1,0 +1,48 @@
+{
+  "health": {
+    "status": 200,
+    "body": {
+      "alive": true,
+      "backend": "transformers+peft"
+    }
+  },
+  "ready": {
+    "status": 200,
+    "body": {
+      "ready": true,
+      "error": null
+    }
+  },
+  "generation": {
+    "status": 200,
+    "body": {
+      "answer": "{\"answer\": \"0\"}",
+      "output_tokens": 7,
+      "model_id": "baseline-qwen3-0.6b-c1899de2",
+      "runtime_sha256": "1c8b6cfc1796b12f3c21933c977ecbb922d494403ff96b431680f90928d26f65",
+      "request_id": "e2621c72-cb20-4c0d-af3d-ed199bd47cee",
+      "queue_seconds": 2.45800765696913e-06,
+      "generation_seconds": 0.5172650000022259,
+      "total_seconds": 0.5172674580098828
+    }
+  },
+  "invalid": {
+    "status": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "less_than_equal",
+          "loc": [
+            "body",
+            "max_new_tokens"
+          ],
+          "msg": "Input should be less than or equal to 32",
+          "input": 100000,
+          "ctx": {
+            "le": 32
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,90 @@
+WORKSPACE=evidence/workspaces/prefect-yFtUYh/lab
+Создан синтетический стенд: evidence/workspaces/prefect-yFtUYh/lab
+--- failure after prepare ---
+15:18:12.331 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8185
+See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+15:18:15.684 | INFO    | Flow run 'agile-guppy' - Beginning flow run 'agile-guppy' for flow 'model-release'
+PREPARED 88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4 8dcef6afa40c9a9f7c3be11715ebdfa56b62e5a028234a5d9744c3a41ef49ac9
+15:18:15.690 | INFO    | Task run 'prepare_input-c0f' - Finished in state Completed()
+15:18:16.694 | ERROR   | Flow run 'agile-guppy' - Encountered exception during execution: RuntimeError('Инъекция сбоя после подготовки')
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flow_engine.py", line 1330, in run_context
+    yield self
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flow_engine.py", line 2111, in run_flow_sync
+    engine.call_flow_fn()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flow_engine.py", line 1350, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/utilities/callables/__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/flow.py", line 58, in release_flow
+    raise RuntimeError("Инъекция сбоя после подготовки")
+RuntimeError: Инъекция сбоя после подготовки
+15:18:16.724 | INFO    | Flow run 'agile-guppy' - Finished in state Failed('Flow run encountered an exception: RuntimeError: Инъекция сбоя после подготовки')
+Traceback (most recent call last):
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/flow.py", line 84, in <module>
+    main()
+    ~~~~^^
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/flow.py", line 77, in main
+    release_flow(
+    ~~~~~~~~~~~~^
+        args.workspace, args.report,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        args.fail_after_prepare, args.fail_after_accept,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flows.py", line 1887, in __call__
+    return run_flow(
+        flow=self,
+    ...<2 lines>...
+        return_type=return_type,
+    )
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flow_engine.py", line 2268, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flow_engine.py", line 2113, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ~~~~~~~~~~~~~^^
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flow_engine.py", line 788, in result
+    raise self._raised
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flow_engine.py", line 1330, in run_context
+    yield self
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flow_engine.py", line 2111, in run_flow_sync
+    engine.call_flow_fn()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/flow_engine.py", line 1350, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/.venv/lib/python3.13/site-packages/prefect/utilities/callables/__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+  File "/Users/dmitryromanov/Documents/kimi/workspace/mlops/hw8-9-10/flow.py", line 58, in release_flow
+    raise RuntimeError("Инъекция сбоя после подготовки")
+RuntimeError: Инъекция сбоя после подготовки
+15:18:16.736 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8185
+FLOW_FAILURE_EXIT=1
+--- recovery in a new process ---
+15:18:18.225 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8905
+See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+15:18:19.530 | INFO    | Flow run 'agile-toucanet' - Beginning flow run 'agile-toucanet' for flow 'model-release'
+15:18:19.537 | INFO    | Task run 'prepare_input-174' - Finished in state Cached(type=COMPLETED)
+15:18:19.538 | INFO    | Task run 'get_artifact-12a' - Finished in state Completed()
+15:18:19.539 | INFO    | Task run 'evaluate_release-eaf' - Finished in state Completed()
+PUBLISHED fixture-B 053a907dc5eb123754839c90e93804961aaab66cefb75d529044125633a4a3a2
+15:18:19.541 | INFO    | Task run 'publish_release-621' - Finished in state Completed()
+FLOW_RESULT {"outcome": "PUBLISHED", "release_id": "053a907dc5eb123754839c90e93804961aaab66cefb75d529044125633a4a3a2", "prepared": {"input_sha256": "88bbd559a04a7a432693a1c611ef2704bb711ac17dd5e22203ee9e5020f59fd4", "rows": 2, "config": {"tokenizer_revision": "r1", "template_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "max_length": 128, "code_revision": "prepare-v1"}, "cache_key": "8dcef6afa40c9a9f7c3be11715ebdfa56b62e5a028234a5d9744c3a41ef49ac9"}}
+15:18:20.541 | INFO    | Flow run 'agile-toucanet' - Finished in state Completed()
+15:18:20.556 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8905
+FLOW_RECOVERY_EXIT=0
+--- invalidate input bytes ---
+15:18:22.122 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8734
+See https://docs.prefect.io/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+15:18:23.522 | INFO    | Flow run 'luminous-cockle' - Beginning flow run 'luminous-cockle' for flow 'model-release'
+PREPARED 90e3b8ce0fbb4729088458a3a5cdfba2ccce30a602206ee3ba6572abeca1a95a ac65977aba2ca8a6029f13f3f279b6d0ab459952c53afbf49c66f6fd24aa5ce2
+15:18:23.529 | INFO    | Task run 'prepare_input-e1b' - Finished in state Completed()
+15:18:23.530 | INFO    | Task run 'get_artifact-991' - Finished in state Completed()
+15:18:23.531 | INFO    | Task run 'evaluate_release-f97' - Finished in state Completed()
+ALREADY_PUBLISHED fixture-B 053a907dc5eb123754839c90e93804961aaab66cefb75d529044125633a4a3a2
+15:18:23.534 | INFO    | Task run 'publish_release-e12' - Finished in state Completed()
+FLOW_RESULT {"outcome": "ALREADY_PUBLISHED", "release_id": "053a907dc5eb123754839c90e93804961aaab66cefb75d529044125633a4a3a2", "prepared": {"input_sha256": "90e3b8ce0fbb4729088458a3a5cdfba2ccce30a602206ee3ba6572abeca1a95a", "rows": 1, "config": {"tokenizer_revision": "r1", "template_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "max_length": 128, "code_revision": "prepare-v1"}, "cache_key": "ac65977aba2ca8a6029f13f3f279b6d0ab459952c53afbf49c66f6fd24aa5ce2"}}
+15:18:24.533 | INFO    | Flow run 'luminous-cockle' - Finished in state Completed()
+15:18:24.546 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8734
+FLOW_INVALIDATION_EXIT=0

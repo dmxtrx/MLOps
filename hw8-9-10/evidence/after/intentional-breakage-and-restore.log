@@ -1,0 +1,91 @@
+TEMP_COPY=/var/folders/4b/71l5hfvn6w9g3ld4hdrt24j40000gn/T/tmp.ENs6U9v0rF
+--- intentional cache-key regression in a temporary copy ---
+test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests) ... FAIL
+test_complete_bound_report_allowed (test_release.ReleaseContractTests) ... ok
+test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) ... test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseContractTests) ... ok
+test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests) ... ok
+test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests) ... ok
+test_invalid_metric_rejected (test_release.ReleaseContractTests) ... ok
+test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests) ... FAIL
+test_missing_fields_rejected (test_release.ReleaseContractTests) ... ok
+test_publish_and_repeat (test_release.ReleaseContractTests) ... ok
+test_rejection_preserves_previous_bytes (test_release.ReleaseContractTests) ... ok
+test_report_binding_mismatch_rejected (test_release.ReleaseContractTests) ... ok
+test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests) ... ok
+
+======================================================================
+FAIL: test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/4b/71l5hfvn6w9g3ld4hdrt24j40000gn/T/tmp.ENs6U9v0rF/tests/test_release.py", line 42, in test_changed_bytes_at_same_path_invalidate_cache
+    self.assertNotEqual(old,release.cache_key(self.data,self.config))
+AssertionError: '420d9e6660646dbfeaa452dae8cbbdebbe8c142c9055a888f0d5c03aa1fad0c7' == '420d9e6660646dbfeaa452dae8cbbdebbe8c142c9055a888f0d5c03aa1fad0c7'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) (key='tokenizer_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/4b/71l5hfvn6w9g3ld4hdrt24j40000gn/T/tmp.ENs6U9v0rF/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+AssertionError: '422e94fe155931e50ddbeab6b4f985c81c7a249e71a6d616287238ae4611d88a' == '422e94fe155931e50ddbeab6b4f985c81c7a249e71a6d616287238ae4611d88a'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) (key='template_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/4b/71l5hfvn6w9g3ld4hdrt24j40000gn/T/tmp.ENs6U9v0rF/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+AssertionError: '422e94fe155931e50ddbeab6b4f985c81c7a249e71a6d616287238ae4611d88a' == '422e94fe155931e50ddbeab6b4f985c81c7a249e71a6d616287238ae4611d88a'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) (key='max_length')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/4b/71l5hfvn6w9g3ld4hdrt24j40000gn/T/tmp.ENs6U9v0rF/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+AssertionError: '422e94fe155931e50ddbeab6b4f985c81c7a249e71a6d616287238ae4611d88a' == '422e94fe155931e50ddbeab6b4f985c81c7a249e71a6d616287238ae4611d88a'
+
+======================================================================
+FAIL: test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) (key='code_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/4b/71l5hfvn6w9g3ld4hdrt24j40000gn/T/tmp.ENs6U9v0rF/tests/test_release.py", line 48, in test_every_preparation_setting_invalidates_cache
+    config={**self.config,key:value};self.assertNotEqual(old,release.cache_key(self.data,config))
+AssertionError: '422e94fe155931e50ddbeab6b4f985c81c7a249e71a6d616287238ae4611d88a' == '422e94fe155931e50ddbeab6b4f985c81c7a249e71a6d616287238ae4611d88a'
+
+======================================================================
+FAIL: test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/var/folders/4b/71l5hfvn6w9g3ld4hdrt24j40000gn/T/tmp.ENs6U9v0rF/tests/test_release.py", line 38, in test_key_ignores_path_and_mapping_order
+    self.assertEqual(key,release.cache_key(other,dict(reversed(list(self.config.items())))))
+AssertionError: 'd0ae128aa301d31677d2fa13562748f12c253fa16f86dbb5a29eee0907b8e30e' != '0f5ccf732cacacab618e50f35e384720b1fd0268143ee25bdc9b39d60318e257'
+- d0ae128aa301d31677d2fa13562748f12c253fa16f86dbb5a29eee0907b8e30e
++ 0f5ccf732cacacab618e50f35e384720b1fd0268143ee25bdc9b39d60318e257
+
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.009s
+
+FAILED (failures=6)
+INTENTIONAL_BREAK_EXIT=1
+--- restored temporary copy ---
+test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests) ... ok
+test_complete_bound_report_allowed (test_release.ReleaseContractTests) ... ok
+test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests) ... ok
+test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseContractTests) ... ok
+test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests) ... ok
+test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests) ... ok
+test_invalid_metric_rejected (test_release.ReleaseContractTests) ... ok
+test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests) ... ok
+test_missing_fields_rejected (test_release.ReleaseContractTests) ... ok
+test_publish_and_repeat (test_release.ReleaseContractTests) ... ok
+test_rejection_preserves_previous_bytes (test_release.ReleaseContractTests) ... ok
+test_report_binding_mismatch_rejected (test_release.ReleaseContractTests) ... ok
+test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.008s
+
+OK
+RESTORED_EXIT=0
